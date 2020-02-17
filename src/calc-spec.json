@@ -1,0 +1,131 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Documentation API",
+    "description": "API description in Markdown.",
+    "version": "1.0.0"
+  },
+  "host": "127.0.0.1:8000",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Application first page.",
+        "description": "Start point of Application.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "No route found"
+          }
+        }
+      }
+    },
+    "/add": {
+      "post": {
+        "description": "Addition of 2 or 3 numbers.",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "param1",
+            "description": "Первое слагаемое",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "param2",
+            "description": "Второе слагаемое",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "param3",
+            "description": "Третье слагаемое",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "No route found"
+          }
+        }
+      }
+    },
+    "/sub": {
+      "post": {
+        "description": "Subtraction of two numbers.",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "param1",
+            "description": "Уменьшаемое",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "param2",
+            "description": "Вычитаемое",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "No route found"
+          }
+        }
+      }
+    },
+    "/mult": {
+      "post": {
+        "description": "Multyplication of two numbers.",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "param1",
+            "description": "Первый множитель",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "in": "formData",
+            "name": "param2",
+            "description": "Второй множитель",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "No route found"
+          }
+        }
+      }
+    }
+  }
+}
