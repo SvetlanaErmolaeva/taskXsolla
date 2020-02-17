@@ -20,3 +20,8 @@ composer require brick/math
 
 8. Запуск проекта
 php -S 127.0.0.1:8000 -t public
+
+Описание проекта:
+сложение localhost/add
+вычитание localhost/sub
+умножение localhost/mult
